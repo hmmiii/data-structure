@@ -19,11 +19,11 @@ class ArrayStack:
             return self.array[self.top+1]
         else: pass
 
-    def peek():
-        if not self.isEmpty(): return self.array[top]
+    def peek(self):
+        if not self.isEmpty(): return self.array[self.top]
         else: pass
     
-    def size(): return top+1
+    def size(self): return self.top+1
 
 
 s = ArrayStack(100) # 새로운 스택 객체 생성.
