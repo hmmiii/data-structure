@@ -1,5 +1,10 @@
 # 스택 예제, 괄호 검사 프로그램.
 
+# 위반 규칙
+# 위반조건1 : 괄호의 개수가 다름
+# 위반조건2 : 오른쪽 괄호가 먼저 나옴
+# 위반조건3 : 괄호가 교차됨
+
 class ArrayStack:
     def __init__(self, capacity) -> None:
         self.capacity = capacity # 스택 용량
