@@ -19,6 +19,12 @@ class CircleQueue:
             self.array[self.rear] = item
         else : pass
     
+    def enqueue2(self, item): # 링 버퍼 삽입 연산
+        self.rear = (self.rear + 1) % self.capacity
+        self.array[self.rear] = item # 일단, 무조건 삽입
+        if self.isEmpty(): # front == rear
+            self.front = (self.front + 1) % self.capacity
+    
     def dequeue(self):
         if not self.isEmpty():
             self.front = (self.front+1) % self.capacity
