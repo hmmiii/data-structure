@@ -33,17 +33,8 @@ class CircleQueue:
     def size(self):
         return (self.rear - self.front + self.capacity) % self.capacity
     
-    def display(self,msg):
+    def display(self,msg='목록'):
         print(msg, end=' = [ ')
         for i in range(self.front+1, self.front+1+self.size()):
             print(self.array[i%self.capacity], end =' ')
         print("]")
-
-q = CircleQueue()
-q.enqueue(4)
-q.enqueue(4)
-q.enqueue(4)
-print(q.size())
-q.display('목록')
-print(q.dequeue())
-print(q.size())
